@@ -1,0 +1,102 @@
+###檢視代辦事項
+GET http://localhost:8081/todo
+
+###新增代辦事項
+POST http://localhost:8081/todo
+Content-Type:application/json
+
+{
+    "thing":"好酷的事情1",
+    "isDone":false
+}
+
+###檢視特定事項
+GET http://localhost:8081/todo/654e4cb3eb3a411141c9c223
+
+
+###刪除待辦事項
+DELETE  http://localhost:8081/todo/654e4cb3eb3a411141c9c223
+
+###更新待辦事項
+PATCH  http://localhost:8081/todo/654e4cb3eb3a411141c9c223
+Content-Type:application/json
+
+{
+    "thing":"好酷的事情2ˇ3",
+    "isDone":true
+}
+
+###檢視package
+GET http://localhost:8081/package
+
+###新增package
+POST http://localhost:8081/package
+Content-Type:application/json
+
+{ 
+    "id": 2, 
+    "flight": "Flight-2", 
+    "stay": "2022-08-09", 
+    "price": 100, 
+    "quota": 2 
+}
+
+###刪除package
+DELETE  http://localhost:8081/package/654ece279eff8e365c8e4fa0
+
+###更新package
+PATCH  http://localhost:8081/package/654ed553c53e1f73d899d819
+Content-Type:application/json
+
+{
+    "quota":2
+}
+
+###檢視flight
+GET http://localhost:8081/flight
+
+###新增flight
+POST http://localhost:8081/flight
+Content-Type:application/json
+
+{ 
+    "ticket": "Flight-2", 
+    "email": "orma.chang@msa.hinet.net"
+}
+
+###刪除flight
+DELETE  http://localhost:8081/flight/654eefc207087cdcfcab30d5
+
+###檢視room
+GET http://localhost:8081/room
+
+###新增room
+POST http://localhost:8081/room
+Content-Type:application/json
+
+{ 
+    "ticket": "Flight-7", 
+    "stay": "2022-08-09", 
+    "email": "orma.chang@msa.hinet.net"
+}
+
+###刪除room
+DELETE  http://localhost:8081/room/654ece279eff8e365c8e4fa0
+
+###檢視order(all)
+GET http://localhost:8081/order
+
+###檢視order
+GET http://localhost:8081/order/accc9630-6d57-4d6e-a6d7-f1abce45789e/orma.chang@msa.hinet.net
+
+###新增order
+POST http://localhost:8081/order
+Content-Type:application/json
+
+{ 
+    "id": "2", 
+    "email": "orma.chang@msa.hinet.net"
+}
+
+###刪除order
+DELETE  http://localhost:8081/order/accc9630-6d57-4d6e-a6d7-f1abce45789e/orma.chang@msa.hinet.net
